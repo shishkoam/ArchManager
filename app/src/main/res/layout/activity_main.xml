@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+            android:id="@+id/toolbarRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarDeleteMode"
+            android:layout_width="match_parent"
+            android:background="#212121"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <ImageView
+                android:id="@+id/exitFromDeleteMode"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_arrow_back_white_18dp"
+                />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_editing_delete_icon"
+                />
+
+            <ImageView
+                android:id="@+id/rename"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_pencil"
+                />
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:listSelector="#20212121">
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>
+
